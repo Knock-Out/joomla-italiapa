@@ -41,6 +41,9 @@ defined('_JEXEC') or die;
 			<?php endif; ?>
 
 			<?php if ($this->contact->suburb && $this->params->get('show_suburb')) : ?>
+			        <dt>
+					<svg class="u-text-r-m Icon Icon-it-pin" style="margin-right: 0.25em;"><use xlink:href="#Icon-it-pin"></use></svg>
+				</dt>
 				<dd>
 					<span class="contact-suburb" itemprop="addressLocality">
 						<?php echo $this->contact->suburb; ?>
@@ -50,6 +53,9 @@ defined('_JEXEC') or die;
 			<?php endif; ?>
 
 			<?php if ($this->contact->state && $this->params->get('show_state')) : ?>
+				<dt>
+					<svg class="u-text-r-m Icon Icon-it-minus" style="margin-right: 0.25em;"><use xlink:href="#Icon-it-minus"></use></svg>
+				</dt>
 				<dd>
 					<span class="contact-state" itemprop="addressRegion">
 						<?php echo $this->contact->state; ?>
@@ -59,6 +65,9 @@ defined('_JEXEC') or die;
 			<?php endif; ?>
 
 			<?php if ($this->contact->postcode && $this->params->get('show_postcode')) : ?>
+			        <dt>
+					<svg class="u-text-r-m Icon Icon-it-minus" style="margin-right: 0.25em;"><use xlink:href="#Icon-it-minus"></use></svg>
+				</dt>
 				<dd>
 					<span class="contact-postcode" itemprop="postalCode">
 						<?php echo $this->contact->postcode; ?>
@@ -66,7 +75,7 @@ defined('_JEXEC') or die;
 					</span>
 				</dd>
 			<?php endif; ?>
-
+    			<br />
 			<?php if ($this->contact->country && $this->params->get('show_country')) : ?>
 				<dd>
 					<span class="contact-country" itemprop="addressCountry">
